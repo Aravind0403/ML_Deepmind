@@ -1,0 +1,9 @@
+id: causal-multihead-attention
+kind: problem
+unit_id: transformer-attention
+title: "Causal Multi-Head Self-Attention from Scratch"
+difficulty: medium
+xp: 50
+estimated_minutes: 25
+tags: ["transformers", "attention", "causal-mask", "llm"]
+order: 1

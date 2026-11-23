@@ -1,0 +1,9 @@
+id: gcn-message-passing
+kind: problem
+unit_id: gnn-continual
+title: "Graph Convolutional Network (GCN) Layer"
+difficulty: easy
+xp: 35
+estimated_minutes: 15
+tags: ["gnn", "graph-neural-networks", "message-passing"]
+order: 1

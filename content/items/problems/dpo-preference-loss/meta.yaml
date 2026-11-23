@@ -1,0 +1,9 @@
+id: dpo-preference-loss
+kind: problem
+unit_id: rl-post-training
+title: "Direct Preference Optimization (DPO) Loss & Implicit Reward Margin"
+difficulty: medium
+xp: 45
+estimated_minutes: 15
+tags: ["dpo", "rlhf", "post-training", "alignment"]
+order: 2

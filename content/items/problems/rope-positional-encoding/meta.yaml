@@ -1,0 +1,9 @@
+id: rope-positional-encoding
+kind: problem
+unit_id: transformer-attention
+title: "Rotary Position Embeddings (RoPE)"
+difficulty: medium
+xp: 45
+estimated_minutes: 20
+tags: ["rope", "positional-encoding", "transformers", "llm"]
+order: 2

@@ -1,0 +1,9 @@
+id: outlier-proof-estimator
+kind: puzzle
+unit_id: math-stats-foundations
+title: "The Billionaire Walks Into a Cafe (Outlier-Proof Estimator)"
+difficulty: easy
+xp: 25
+estimated_minutes: 10
+tags: ["statistics", "estimators", "robustness", "intuition"]
+order: 1

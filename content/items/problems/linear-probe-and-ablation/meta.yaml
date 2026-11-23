@@ -1,0 +1,9 @@
+id: linear-probe-and-ablation
+kind: problem
+unit_id: mlops-safety-interp
+title: "Directional Concept Erasure (Amnesic Probing / Orthogonal Ablation)"
+difficulty: medium
+xp: 45
+estimated_minutes: 20
+tags: ["ai-safety", "interpretability", "probes", "ablation", "governance"]
+order: 1

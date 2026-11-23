@@ -1,0 +1,9 @@
+id: roofline-and-kv-cache-math
+kind: math
+unit_id: roofline-kv-memory
+title: "KV-Cache Sizing & GPU Roofline Arithmetic Intensity"
+difficulty: medium
+xp: 40
+estimated_minutes: 15
+tags: ["roofline", "kv-cache", "hbm", "arithmetic-intensity", "inference"]
+order: 2

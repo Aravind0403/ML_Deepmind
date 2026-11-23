@@ -1,0 +1,171 @@
+- id: vid-3b1b-linalg
+  unit_id: linear-algebra-gemm
+  title: "Matrix Multiplication as Composition (3Blue1Brown)"
+  creator: "3Blue1Brown"
+  youtube_id: "XkY2DOUCWMU"
+  duration_sec: 603
+  checkpoints:
+    - at_sec: 215
+      kind: problem
+      item_id: matrix-vector-and-tiled-gemm
+      prompt: "Pause at 3:35: Implement blocked/tiled matrix multiplication without NumPy matmul."
+    - at_sec: 440
+      kind: quick_check
+      question: "Why is matrix multiplication associative (A(BC) = (AB)C) but not commutative (AB != BA)?"
+      expected_points: ["function composition", "order of transformations", "non-commutative"]
+
+- id: vid-sentdex-nnfs
+  unit_id: linear-algebra-gemm
+  title: "Neural Networks from Scratch — Intro & Neuron Code (Sentdex)"
+  creator: "sentdex"
+  youtube_id: "Wo5dMEP_BbI"
+  duration_sec: 1180
+  checkpoints:
+    - at_sec: 660
+      kind: problem
+      item_id: mlp-manual-backprop
+      prompt: "Pause at 11:00: Implement full 2-layer MLP forward & analytical backpropagation."
+
+- id: vid-statquest-ridge
+  unit_id: math-stats-foundations
+  title: "Regularization Part 1: Ridge (L2) Regression (StatQuest)"
+  creator: "StatQuest with Josh Starmer"
+  youtube_id: "Q81RR3yKn30"
+  duration_sec: 1218
+  checkpoints:
+    - at_sec: 480
+      kind: lab
+      item_id: regularized-regression-lab
+      prompt: "Pause at 8:00: Beat validation RMSE <= 0.85 on our collinear Ridge Regression lab with K-fold CV."
+    - at_sec: 900
+      kind: puzzle
+      item_id: outlier-proof-estimator
+      prompt: "Pause at 15:00: Invent an outlier-proof estimator that survives the Billionaire Attack."
+
+- id: vid-3b1b-calculus
+  unit_id: math-stats-foundations
+  title: "The Essence of Calculus — Chapter 1 (3Blue1Brown)"
+  creator: "3Blue1Brown"
+  youtube_id: "WUvTyaaNkzM"
+  duration_sec: 1024
+  checkpoints:
+    - at_sec: 540
+      kind: math
+      item_id: softmax-and-attention-scaling
+      prompt: "Pause at 9:00: Derive the Softmax diagonal Jacobian and 1/sqrt(d_k) variance proof in SymPy."
+
+- id: vid-karpathy-gpt
+  unit_id: transformer-attention
+  title: "Let's build GPT: from scratch, in code, spelled out (Andrej Karpathy)"
+  creator: "Andrej Karpathy"
+  youtube_id: "kCc8FmEb1nY"
+  duration_sec: 6980
+  checkpoints:
+    - at_sec: 2520
+      kind: math
+      item_id: softmax-and-attention-scaling
+      prompt: "Pause at 42:00: Right as attention logits explode without scaling — derive the 1/sqrt(d_k) proof."
+    - at_sec: 3720
+      kind: problem
+      item_id: causal-multihead-attention
+      prompt: "Pause at 62:00: Implement Causal Multi-Head Self-Attention from scratch."
+    - at_sec: 4800
+      kind: debugging
+      item_id: causal-mask-sign-and-fp16-nan
+      prompt: "Pause at 80:00: Diagnose and fix the inverted causal mask + fp16 softmax NaN bug."
+
+- id: vid-cs224w-gnn
+  unit_id: gnn-continual
+  title: "Stanford CS224W: Machine Learning with Graphs — Lecture 1.1 (Jure Leskovec)"
+  creator: "Stanford Online"
+  youtube_id: "JAB_plj2rbA"
+  duration_sec: 1050
+  checkpoints:
+    - at_sec: 420
+      kind: problem
+      item_id: gcn-message-passing
+      prompt: "Pause at 7:00: Implement the symmetric normalized Graph Convolutional Network (GCN) layer."
+    - at_sec: 840
+      kind: problem
+      item_id: ewc-continual-penalty
+      prompt: "Pause at 14:00: Implement Elastic Weight Consolidation (EWC) Fisher penalty for Continual Learning."
+
+- id: vid-umar-quantization
+  unit_id: quantization-compression
+  title: "Quantization Explained with PyTorch — PTQ & QAT (Umar Jamil)"
+  creator: "Umar Jamil"
+  youtube_id: "0VdNflU08yA"
+  duration_sec: 4320
+  checkpoints:
+    - at_sec: 1620
+      kind: problem
+      item_id: int8-symmetric-quantization
+      prompt: "Pause at 27:00: Implement per-channel symmetric INT8 quantization & verify outlier isolation."
+    - at_sec: 2940
+      kind: quick_check
+      question: "Why does per-channel weight quantization beat per-tensor quantization when activation/weight outliers occur?"
+      expected_points: ["outlier", "dynamic range", "scale", "channel"]
+
+- id: vid-silver-rl
+  unit_id: rl-post-training
+  title: "Policy Gradient Methods & Modern RL Post-Training (David Silver)"
+  creator: "DeepMind / UCL"
+  youtube_id: "KHZVXao4qXs"
+  duration_sec: 5580
+  checkpoints:
+    - at_sec: 1980
+      kind: problem
+      item_id: grpo-group-advantage
+      prompt: "Pause at 33:00: Implement DeepSeek-R1 GRPO group-normalized advantage & clipped loss."
+    - at_sec: 3600
+      kind: problem
+      item_id: dpo-preference-loss
+      prompt: "Pause at 60:00: Implement Direct Preference Optimization (DPO) loss without a reward model."
+
+- id: vid-gpumode-inference
+  unit_id: roofline-kv-memory
+  title: "GPU MODE: Performance Engineering, Roofline & LLM Inference"
+  creator: "GPU MODE"
+  youtube_id: "LuhJEEJQgUM"
+  duration_sec: 3900
+  checkpoints:
+    - at_sec: 1140
+      kind: math
+      item_id: roofline-and-kv-cache-math
+      prompt: "Pause at 19:00: Compute exact KV-cache footprint and H100 Roofline ridge point."
+    - at_sec: 2280
+      kind: puzzle
+      item_id: kv-cache-memory-waste
+      prompt: "Pause at 38:00: Invent a paged KV allocator that beats contiguous fragmentation."
+
+- id: vid-vllm-pagedattention
+  unit_id: paged-serving-speculative
+  title: "Fast LLM Serving with vLLM and PagedAttention (Woosuk Kwon)"
+  creator: "Anyscale / vLLM"
+  youtube_id: "5ZlavKF_98U"
+  duration_sec: 2340
+  checkpoints:
+    - at_sec: 720
+      kind: problem
+      item_id: paged-kv-cache-allocator
+      prompt: "Pause at 12:00: Implement the PagedAttention BlockManager with Copy-on-Write prefix sharing."
+    - at_sec: 1500
+      kind: debugging
+      item_id: vllm-prefill-starvation-bug
+      prompt: "Pause at 25:00: Fix the real vLLM Issue #40004 continuous-batching prefill starvation bug."
+    - at_sec: 1980
+      kind: lab
+      item_id: speculative-decoding-lab
+      prompt: "Pause at 33:00: Implement exact distribution-preserving speculative decoding rejection sampling."
+
+- id: vid-nanda-mechinterp
+  unit_id: mlops-safety-interp
+  title: "Mechanistic Interpretability: Probing & Causal Interventions (Neel Nanda)"
+  creator: "Neel Nanda"
+  youtube_id: "KV5gbOmHbjU"
+  duration_sec: 3300
+  checkpoints:
+    - at_sec: 1500
+      kind: problem
+      item_id: linear-probe-and-ablation
+      prompt: "Pause at 25:00: Implement directional concept erasure (amnesic probing)."

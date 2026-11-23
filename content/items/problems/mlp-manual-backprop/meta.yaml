@@ -1,0 +1,9 @@
+id: mlp-manual-backprop
+kind: problem
+unit_id: linear-algebra-gemm
+title: "2-Layer MLP Forward & Manual Analytical Backprop"
+difficulty: medium
+xp: 45
+estimated_minutes: 20
+tags: ["backprop", "deep-learning", "calculus", "linear-algebra"]
+order: 2

@@ -1,0 +1,9 @@
+id: grpo-group-advantage
+kind: problem
+unit_id: rl-post-training
+title: "DeepSeek-R1 GRPO Group-Relative Advantage & Clipped Objective"
+difficulty: medium
+xp: 50
+estimated_minutes: 20
+tags: ["grpo", "rlhf", "post-training", "rl", "deepseek"]
+order: 1

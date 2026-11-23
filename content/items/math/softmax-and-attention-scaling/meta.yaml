@@ -1,0 +1,9 @@
+id: softmax-and-attention-scaling
+kind: math
+unit_id: math-stats-foundations
+title: "Softmax Shift-Invariance & 1/sqrt(d_k) Variance Scaling"
+difficulty: medium
+xp: 35
+estimated_minutes: 15
+tags: ["calculus", "softmax", "attention", "variance", "sympy"]
+order: 2

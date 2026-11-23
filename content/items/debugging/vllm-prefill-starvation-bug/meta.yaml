@@ -1,0 +1,9 @@
+id: vllm-prefill-starvation-bug
+kind: debugging
+unit_id: paged-serving-speculative
+title: "Bug Hunt #3: vLLM Issue #40004 — Incoming Prefills Preempting Active Decodes"
+difficulty: hard
+xp: 65
+estimated_minutes: 20
+tags: ["debugging", "vllm", "continuous-batching", "scheduler", "inference"]
+order: 5

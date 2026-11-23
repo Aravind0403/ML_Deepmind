@@ -1,0 +1,9 @@
+id: int8-symmetric-quantization
+kind: problem
+unit_id: quantization-compression
+title: "Per-Channel Symmetric INT8 Quantization & Dequantization"
+difficulty: easy
+xp: 35
+estimated_minutes: 15
+tags: ["quantization", "int8", "ptq", "per-channel"]
+order: 1

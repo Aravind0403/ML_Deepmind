@@ -1,0 +1,9 @@
+id: paged-kv-cache-allocator
+kind: problem
+unit_id: paged-serving-speculative
+title: "PagedAttention Physical Block Allocator with Copy-on-Write Fork"
+difficulty: hard
+xp: 65
+estimated_minutes: 30
+tags: ["paged-attention", "vllm", "kv-cache", "ml-infra", "systems"]
+order: 1

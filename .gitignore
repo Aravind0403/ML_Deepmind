@@ -1,0 +1,47 @@
+# Private personal data (never commit)
+private/
+backups/
+db/*.sqlite
+db/*.sqlite-journal
+db/*.sqlite-wal
+!db/.gitkeep
+
+# Environment variables
+.env
+.env*.local
+.env.production
+.env.development
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node / Next.js
+node_modules/
+**/node_modules/
+*node_modules*
+frontend/.next/
+frontend/out/
+*.tsbuildinfo
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo

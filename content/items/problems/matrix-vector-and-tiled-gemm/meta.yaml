@@ -1,0 +1,11 @@
+id: matrix-vector-and-tiled-gemm
+kind: problem
+unit_id: linear-algebra-gemm
+title: "Blocked (Tiled) Matrix Multiplication (GEMM)"
+difficulty: medium
+xp: 40
+estimated_minutes: 20
+tags: ["linear-algebra", "gemm", "tiling", "cache-locality", "numpy"]
+banned_apis: ["matmul", "dot", "einsum", "tensordot"]
+ban_matmul_op: true
+order: 1

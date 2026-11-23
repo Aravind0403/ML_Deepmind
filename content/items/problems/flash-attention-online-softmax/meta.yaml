@@ -1,0 +1,9 @@
+id: flash-attention-online-softmax
+kind: problem
+unit_id: roofline-kv-memory
+title: "FlashAttention Online Softmax Tile Update"
+difficulty: hard
+xp: 65
+estimated_minutes: 25
+tags: ["flash-attention", "inference", "gpu-kernels", "sram", "softmax"]
+order: 3

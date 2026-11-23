@@ -1,0 +1,9 @@
+id: psi-feature-drift-detector
+kind: problem
+unit_id: mlops-safety-interp
+title: "MLOps Production Feature Drift Monitor (Population Stability Index)"
+difficulty: easy
+xp: 35
+estimated_minutes: 15
+tags: ["mlops", "drift", "psi", "monitoring"]
+order: 2

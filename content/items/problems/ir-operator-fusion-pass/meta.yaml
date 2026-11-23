@@ -1,0 +1,9 @@
+id: ir-operator-fusion-pass
+kind: problem
+unit_id: paged-serving-speculative
+title: "ML Compiler Pass: Pointwise Operator Fusion over SSA DAG"
+difficulty: hard
+xp: 60
+estimated_minutes: 25
+tags: ["compilers", "mlir", "fusion", "graph", "systems", "swe-infra"]
+order: 4

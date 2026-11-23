@@ -1,0 +1,9 @@
+id: ewc-continual-penalty
+kind: problem
+unit_id: gnn-continual
+title: "Elastic Weight Consolidation (EWC) Penalty & Gradient"
+difficulty: medium
+xp: 40
+estimated_minutes: 15
+tags: ["continual-learning", "ewc", "catastrophic-forgetting", "fisher"]
+order: 2

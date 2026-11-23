@@ -1,0 +1,11 @@
+id: regularized-regression-lab
+kind: lab
+unit_id: math-stats-foundations
+title: "Lab: Collinear Ridge Regression & Cross-Validated Lambda Selection"
+difficulty: medium
+xp: 60
+estimated_minutes: 25
+tags: ["classical-ml", "regularization", "ridge", "linear-algebra", "lab"]
+metric_name: "val_rmse"
+metric_goal: "<= 0.85"
+order: 3

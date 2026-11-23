@@ -1,0 +1,9 @@
+id: kv-cache-memory-waste
+kind: puzzle
+unit_id: roofline-kv-memory
+title: "Ragged Sequence Fragmentation (Why PagedAttention Exists)"
+difficulty: medium
+xp: 35
+estimated_minutes: 15
+tags: ["kv-cache", "paged-attention", "inference", "fragmentation", "intuition"]
+order: 1

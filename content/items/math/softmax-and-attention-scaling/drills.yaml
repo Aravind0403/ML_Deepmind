@@ -1,0 +1,19 @@
+drills:
+  - id: drill-1
+    prompt: "If q_i, k_i ~ N(0, sigma^2) independently for i=1..d, what is Var(q^T k) in terms of d and sigma? (Use variables `d` and `sigma`, e.g. `d*sigma**4`)"
+    mode: symbolic
+    symbols: ["d", "sigma"]
+    expected: "d * sigma**4"
+    hint: "Var(q_i * k_i) = E[q_i^2]E[k_i^2] = sigma^2 * sigma^2 = sigma^4, summed d times."
+  - id: drill-2
+    prompt: "What is the diagonal entry d(softmax(z)_i)/dz_i in terms of p = softmax(z)_i? (Use variable `p`)"
+    mode: symbolic
+    symbols: ["p"]
+    expected: "p * (1 - p)"
+    hint: "Apply the quotient rule to exp(z_i) / sum_j exp(z_j)."
+  - id: drill-3
+    prompt: "For d_k = 64 with unit-variance q and k, by what factor must you divide q^T k so the logit standard deviation equals 1? (Enter a number)"
+    mode: numeric
+    expected: 8.0
+    tol: 1e-6
+    hint: "sqrt(64) = 8."

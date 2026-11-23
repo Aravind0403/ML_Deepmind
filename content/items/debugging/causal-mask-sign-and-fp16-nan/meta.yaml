@@ -1,0 +1,9 @@
+id: causal-mask-sign-and-fp16-nan
+kind: debugging
+unit_id: transformer-attention
+title: "Bug Hunt #2: Inverted Causal Mask + FP16 Softmax NaN Overflow"
+difficulty: hard
+xp: 60
+estimated_minutes: 20
+tags: ["debugging", "attention", "fp16", "numerical-stability", "causal-mask"]
+order: 3

@@ -1,0 +1,117 @@
+version: "1.0.0"
+tracks:
+  - id: math-fundamentals
+    title: Math & Fundamentals
+    subtitle: Linear Algebra, Math for ML, Classical ML, Deep Learning Fundamentals
+    order: 1
+    color: "#38bdf8"
+    units:
+      - id: linear-algebra-gemm
+        title: Linear Algebra & Matrix Mechanics
+        req: []
+        skills: ["linear-algebra", "gemm", "matrix-multiplication", "tiling", "numpy"]
+        estimated_minutes: 45
+        placement_question:
+          prompt: "Why does tiled (blocked) GEMM dramatically outperform naive triple-loop GEMM on modern CPUs and GPUs even though both perform 2*M*N*K FLOPs?"
+          keywords: ["cache", "locality", "memory bandwidth", "reuse", "sram", "hbm", "arithmetic intensity"]
+          min_keywords: 2
+      - id: math-stats-foundations
+        title: Statistical Estimation, Calculus & Regularization
+        req: ["linear-algebra-gemm"]
+        skills: ["statistics", "estimators", "regularization", "ridge", "softmax", "calculus", "classical-ml"]
+        estimated_minutes: 50
+        placement_question:
+          prompt: "Explain why L2 (Ridge) regularization stabilizes ordinary least squares when features are strongly collinear."
+          keywords: ["eigenvalue", "condition", "singular", "invertible", "variance", "lambda", "collinear"]
+          min_keywords: 2
+
+  - id: llms-advanced-nets
+    title: LLMs & Advanced Nets
+    subtitle: LLM Basics, Graph Neural Networks (GNNs), Continual Learning
+    order: 2
+    color: "#a78bfa"
+    units:
+      - id: transformer-attention
+        title: Causal Attention & Positional Encoding
+        req: ["math-stats-foundations"]
+        skills: ["transformers", "attention", "causal-mask", "rope", "positional-encoding", "llm"]
+        estimated_minutes: 60
+        placement_question:
+          prompt: "Why does Rotary Position Embedding (RoPE) preserve relative position information inside the dot product Q_m · K_n?"
+          keywords: ["rotation", "relative", "angle", "orthogonal", "m-n", "inner product", "distance"]
+          min_keywords: 2
+      - id: gnn-continual
+        title: Graph Neural Networks & Continual Learning
+        req: ["transformer-attention"]
+        skills: ["gnn", "graph-neural-networks", "message-passing", "continual-learning", "ewc", "catastrophic-forgetting", "fisher"]
+        estimated_minutes: 45
+        placement_question:
+          prompt: "In Elastic Weight Consolidation (EWC), why is the diagonal Fisher Information Matrix used to weight parameter penalties?"
+          keywords: ["importance", "sensitivity", "curvature", "forgetting", "hessian", "posterior", "task"]
+          min_keywords: 2
+
+  - id: post-training-optimization
+    title: Post-Training & Optimization
+    subtitle: Neural Network Quantization, RL/RLHF Fine-Tuning for LLMs
+    order: 3
+    color: "#f59e0b"
+    units:
+      - id: quantization-compression
+        title: Neural Network Quantization (INT8 / NF4 / PTQ)
+        req: ["linear-algebra-gemm", "transformer-attention"]
+        skills: ["quantization", "int8", "ptq", "per-channel", "scale", "compression", "fp8"]
+        estimated_minutes: 40
+        placement_question:
+          prompt: "Why does per-channel symmetric weight quantization typically yield much lower quantization error than per-tensor quantization?"
+          keywords: ["outlier", "dynamic range", "scale", "channel", "variance", "clipping", "granularity"]
+          min_keywords: 2
+      - id: rl-post-training
+        title: RLHF, DPO & GRPO Reasoning Fine-Tuning
+        req: ["transformer-attention"]
+        skills: ["rlhf", "dpo", "grpo", "ppo", "post-training", "reward", "kl-divergence", "rl"]
+        estimated_minutes: 55
+        placement_question:
+          prompt: "How does DeepSeek-R1's GRPO eliminate the need for a separate learned value (critic) network compared to PPO?"
+          keywords: ["group", "baseline", "mean", "std", "normalized", "advantage", "critic", "rollout"]
+          min_keywords: 2
+
+  - id: systems-inference
+    title: Systems & Inference (Core)
+    subtitle: ML Infra, SWE Infra, LLM Inference, Compilers, GPU Kernels
+    order: 4
+    color: "#34d399"
+    units:
+      - id: roofline-kv-memory
+        title: Roofline Modeling & KV-Cache Systems
+        req: ["transformer-attention"]
+        skills: ["inference", "kv-cache", "roofline", "arithmetic-intensity", "hbm", "memory-bound", "prefill", "decode", "ttft"]
+        estimated_minutes: 55
+        placement_question:
+          prompt: "Why is autoregressive LLM decode (batch size 1) strongly memory-bandwidth bound while long-prompt prefill is compute bound?"
+          keywords: ["arithmetic intensity", "weights", "hbm", "flop", "bandwidth", "reuse", "batch", "matrix-vector"]
+          min_keywords: 2
+      - id: paged-serving-speculative
+        title: PagedAttention, Continuous Batching & Speculative Decoding
+        req: ["roofline-kv-memory"]
+        skills: ["paged-attention", "vllm", "continuous-batching", "speculative-decoding", "scheduler", "ml-infra", "swe-infra", "compilers", "gpu-kernels", "cuda", "triton"]
+        estimated_minutes: 90
+        placement_question:
+          prompt: "How does speculative decoding guarantee the exact same output token distribution as the target model while reducing target forward passes?"
+          keywords: ["rejection", "draft", "target", "ratio", "residual", "verify", "parallel", "distribution"]
+          min_keywords: 2
+
+  - id: operations-governance
+    title: Operations & Governance
+    subtitle: MLOps, Drift Monitoring, AI Safety & Mechanistic Interpretability
+    order: 5
+    color: "#f472b6"
+    units:
+      - id: mlops-safety-interp
+        title: Drift Monitoring, Linear Probes & Concept Erasure
+        req: ["math-stats-foundations", "transformer-attention"]
+        skills: ["mlops", "drift", "psi", "monitoring", "ai-safety", "interpretability", "probes", "ablation", "evals", "governance"]
+        estimated_minutes: 45
+        placement_question:
+          prompt: "In mechanistic interpretability, what is the difference between finding a high-accuracy linear probe for a concept and performing causal concept erasure/ablation?"
+          keywords: ["correlation", "causal", "projection", "nullspace", "remove", "intervene", "representation"]
+          min_keywords: 2

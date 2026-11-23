@@ -1,0 +1,19 @@
+drills:
+  - id: kv-formula
+    prompt: "Write the symbolic formula for total KV-cache bytes for 1 token across L layers, H_kv heads, head dim d_h, and b bytes per element. (Use variables `L`, `H_kv`, `d_h`, `b`)"
+    mode: symbolic
+    symbols: ["L", "H_kv", "d_h", "b"]
+    expected: "2 * L * H_kv * d_h * b"
+    hint: "Keys and Values each store L * H_kv * d_h * b bytes per token."
+  - id: ridge-point
+    prompt: "An H100 SXM delivers 989 TFLOP/s (BF16) and 3.35 TB/s HBM3 bandwidth. What is its Roofline ridge point in FLOP/byte? (Round to 1 decimal place)"
+    mode: numeric
+    expected: 295.2
+    tol: 0.5
+    hint: "989 / 3.35 ≈ 295.2 FLOP/byte."
+  - id: kv-bytes-concrete
+    prompt: "A model has L=32 layers, H_kv=8 GQA heads, d_h=128, FP16 (2 bytes). How many MiB (divide bytes by 1024^2) does a single 8192-token sequence's KV-cache consume?"
+    mode: numeric
+    expected: 1024.0
+    tol: 0.5
+    hint: "2 * 32 * 8 * 128 * 2 * 8192 / (1024*1024) = 1024 MiB (1 GiB)."

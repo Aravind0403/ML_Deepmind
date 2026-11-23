@@ -1,0 +1,11 @@
+id: speculative-decoding-lab
+kind: lab
+unit_id: paged-serving-speculative
+title: "Lab: Exact Speculative Decoding Rejection Sampler"
+difficulty: hard
+xp: 75
+estimated_minutes: 30
+tags: ["speculative-decoding", "inference", "sampling", "lab"]
+metric_name: "tv_distance"
+metric_goal: "<= 0.02"
+order: 2
