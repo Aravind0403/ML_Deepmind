@@ -60,8 +60,7 @@ export default function OverviewDashboardPage() {
   if (error) {
     return (
       <div className="rounded-xl border border-rose-500/40 bg-rose-500/10 p-6 text-sm text-rose-200">
-        Cannot reach FastAPI backend at <code>http://localhost:8000</code>: {error}. Start the backend with{" "}
-        <code>uvicorn backend.main:app --reload</code>.
+        Cannot reach FastAPI backend: {error}. Make sure the backend service is running.
       </div>
     );
   }
